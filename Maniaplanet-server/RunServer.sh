@@ -1,5 +1,7 @@
 #!/bin/bash
 
+EXTERNAL_IP=`curl ifconfig.me`
+
 if [ "$GAME_MODE" == "JOUST" ]; then
   MatchSettings="MatchSettings/SMStormJoust1.txt"
   SERVER_TITLE_PACK="SMStormJoust@nadeolabs"
@@ -23,7 +25,8 @@ xmlstarlet ed --inplace -u "dedicated/system_config/title" -v "$SERVER_TITLE_PAC
 
 /opt/maniaplanet/ManiaPlanetServer /nodaemon \
   /dedicated_cfg=dedicated_conf.txt \
-  /game_settings=$MatchSettings
+  /game_settings=$MatchSettings \
+  /forceip=$EXTERNAL_IP:$SERVER_PORT
 
 # xml ed --inplace -u "maniacontrol/server/port" -v "$SERVER_XMLRPC_PORT" ManiaControl/configs/server.xml
 # xml ed --inplace -u "maniacontrol/database/host" -v "$MANIACONTROL_DATABASE_HOST" ManiaControl/configs/server.xml

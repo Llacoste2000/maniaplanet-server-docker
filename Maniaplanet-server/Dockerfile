@@ -1,8 +1,12 @@
 FROM ubuntu:20.04
 
+ENV SERVER_NAME="A Maniaplanet Server"
+ENV SERVER_MAX_PLAYERS=6
+ENV SERVER_MAX_SPECTATORS=15
+
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y xmlstarlet wget unzip && \
+    apt-get install -y xmlstarlet wget unzip curl && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/maniaplanet
