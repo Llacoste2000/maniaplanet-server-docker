@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maniacontrol>
+
+  <!-- Configure Your ManiaPlanet Server -->
+  <server>
+
+    <!-- Server Connection Details -->
+    <host>127.0.0.1</host>
+    <port>port</port>
+
+    <!-- XmlRpc Login Details -->
+    <user>SuperAdmin</user>
+    <pass>password</pass>
+
+  </server>
+
+  <!-- Configure the MySQL Database used by ManiaControl -->
+  <database>
+
+    <!-- MySQL Server -->
+    <host>localhost</host>
+    <port>3306</port>
+
+    <!-- MySQL User -->
+    <user>mysql_user</user>
+    <pass>mysql_password</pass>
+
+    <!-- Database Name -->
+    <name>database_name</name>
+
+  </database>
+
+  <!-- Configure Server Master-Administrators -->
+  <masteradmins>
+    <login>admin_login</login>
+  </masteradmins>
+
+  <!-- You can add Admins and Moderators ingame -->
+
+</maniacontrol>

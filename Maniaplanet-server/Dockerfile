@@ -31,4 +31,4 @@ EXPOSE 5000
 
 CMD ./RunServer.sh
 
-VOLUME [ "/server" ]
+VOLUME [ "/opt/maniaplanet" ]
