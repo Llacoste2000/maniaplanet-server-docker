@@ -23,7 +23,7 @@ xmlstarlet ed --inplace -u "dedicated/server_options/max_spectators" -v "$SERVER
 xmlstarlet ed --inplace -u "dedicated/server_options/password_spectator" -v "$SERVER_SPECTATORS_PASSWORD" UserData/Config/dedicated_conf.txt
 xmlstarlet ed --inplace -u "dedicated/system_config/server_port" -v "$SERVER_PORT" UserData/Config/dedicated_conf.txt
 xmlstarlet ed --inplace -u "dedicated/system_config/server_p2p_port" -v "$SERVER_P2P_PORT" UserData/Config/dedicated_conf.txt
-xmlstarlet ed --inplace -u "dedicated/system_config/xmlrpc_port" -v "$SERVER_XMLRPC_PORT" UserData/Config/dedicated_conf.txt
+# xmlstarlet ed --inplace -u "dedicated/system_config/xmlrpc_port" -v "$SERVER_XMLRPC_PORT" UserData/Config/dedicated_conf.txt
 xmlstarlet ed --inplace -u "dedicated/system_config/title" -v "$SERVER_TITLE_PACK" UserData/Config/dedicated_conf.txt
 
 /opt/maniaplanet/ManiaPlanetServer /nodaemon \

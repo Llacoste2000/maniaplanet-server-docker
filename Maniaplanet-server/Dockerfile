@@ -5,7 +5,6 @@ ENV SERVER_MAX_PLAYERS=6
 ENV SERVER_MAX_SPECTATORS=15
 ENV SERVER_PORT=2350
 ENV SERVER_P2P_PORT=3450
-ENV SERVER_XMLRPC_PORT=5000
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -28,11 +27,7 @@ COPY matchsettings/* UserData/Maps/MatchSettings/
 COPY Maps/Elite/* UserData/Maps/Elite/
 COPY Maps/Joust/* UserData/Maps/Joust/
 
-EXPOSE 2350/tcp \
-    2350/udp \
-    3450/tcp \
-    3450/udp \
-    5000
+EXPOSE 5000
 
 CMD ./RunServer.sh
 
