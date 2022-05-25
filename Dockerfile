@@ -5,7 +5,9 @@ ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR "/home/maniaplanet"
 ADD maniaplanet-elite-server /home/maniaplanet
 
-RUN apt-get install -y wget unzip curl php php-mysqli php-curl php-xmlrpc php-zip php-xml php-mbstring git
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y wget unzip curl php php-mysqli php-curl php-xmlrpc php-zip php-xml php-mbstring git
 
 WORKDIR "/home/server"
 
