@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  elite_pixel_pug_01:
+    build:
+      context: .
+    network_mode: host
+    ports:
+      - "2350:2350/tcp"
+      - "2350:2350/udp"
+      - "3450:3450/tcp"
+      - "3450:3450/udp"
+      - "5000:5000"
+    restart: always
+    container_name: elite_pixel_pug_01
+    volumes:
+      - ./elite_pixel_pug_01:/home/server
