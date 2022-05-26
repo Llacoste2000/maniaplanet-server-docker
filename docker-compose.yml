@@ -21,6 +21,7 @@ services:
         - SERVER_NAME=aManiaplanetServer
         - DEDICATED_USERNAME=crunkserver1
         - DEDICATED_PASSWORD=LouJu2000
+        - DATABASE_NAME=elite_pixel_pug_01
     network_mode: host
     ports:
       - "2350:2350/tcp"
