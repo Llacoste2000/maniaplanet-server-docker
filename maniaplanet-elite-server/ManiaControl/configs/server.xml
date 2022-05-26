@@ -18,12 +18,12 @@
 	<database>
 
 		<!-- MySQL Server -->
-		<host>localhost</host>
+		<host>127.0.0.1</host>
 		<port>3306</port>
 
 		<!-- MySQL User -->
-		<user>smserver</user>
-		<pass>smservermysqlpassword</pass>
+		<user>root</user>
+		<pass>JadoreLaBiereDansMonSac33000*!</pass>
 
 		<!-- Database Name -->
 		<name>smservermysqldbname</name>

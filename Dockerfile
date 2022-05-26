@@ -1,6 +1,13 @@
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
+ARG SERVER_NAME
+ARG DEDICATED_USERNAME
+ARG DEDICATED_PASSWORD
+
+ENV servername=${SERVER_NAME}
+ENV dedicatedusername=${DEDICATED_USERNAME}
+ENV dedicatedpassword=${DEDICATED_PASSWORD}
 
 WORKDIR "/home/maniaplanet"
 ADD maniaplanet-elite-server /home/maniaplanet
@@ -12,4 +19,5 @@ RUN apt-get update && \
 WORKDIR "/home/server"
 
 CMD cp -r /home/maniaplanet/* /home/server && \
-    ./ManiaPlanetServer /nodaemon /title=SMStormElite@nadeolabs ElitePizzaboysPrivate /game_settings=MatchSettings/.txt /dedicated_cfg=dedicated_cfg.txt
+    (cd /home/server/ManiaControl && sh ManiaControl.sh &>/dev/null &) \
+    ./ManiaPlanetServer /nodaemon /title=SMStormElite@nadeolabs /servername=${servername} /login=${dedicatedusername} /password=${dedicatedpassword} /game_settings=MatchSettings/.txt /dedicated_cfg=dedicated_cfg.txt

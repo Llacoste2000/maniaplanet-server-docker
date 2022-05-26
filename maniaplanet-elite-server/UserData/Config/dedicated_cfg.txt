@@ -17,13 +17,13 @@
 	</authorization_levels>
 	
  	<masterserver_account>
-		<login>crunkserver8</login>
-		<password>LouJu2000</password>
-		<validation_key></validation_key>
+		<login></login>
+		<password></password>
+		<validation_key>HOGUV</validation_key>
 	</masterserver_account>
 	
 	<server_options>
-		<name>An Elite server</name>
+		<name></name>
 		<comment></comment>
 		<hide_server>0</hide_server>					<!-- value is 0 (always shown), 1 (always hidden), 2 (hidden from nations) -->
 

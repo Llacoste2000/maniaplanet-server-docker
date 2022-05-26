@@ -1,9 +1,26 @@
 version: "3"
 
 services:
+  db:
+    image: mysql:5.7
+    container_name: db_maniaplanet
+    network_mode: host
+    environment:
+      MYSQL_ROOT_PASSWORD: JadoreLaBiereDansMonSac33000*!
+      MYSQL_DATABASE: main_db
+      MYSQL_USER: smserver
+      MYSQL_PASSWORD: JadoreLaBiereDansMonSac33000*!
+    ports:
+      - "6033:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
   elite_pixel_pug_01:
     build:
       context: .
+      args:
+        - SERVER_NAME=aManiaplanetServer
+        - DEDICATED_USERNAME=crunkserver1
+        - DEDICATED_PASSWORD=LouJu2000
     network_mode: host
     ports:
       - "2350:2350/tcp"
@@ -15,3 +32,6 @@ services:
     container_name: elite_pixel_pug_01
     volumes:
       - ./elite_pixel_pug_01:/home/server
+
+volumes:
+  dbdata:
